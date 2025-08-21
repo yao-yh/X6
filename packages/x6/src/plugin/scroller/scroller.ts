@@ -1,20 +1,15 @@
+import { Rectangle, Point } from '@antv/x6-geometry'
 import {
-  Platform,
-  NumberExt,
-  ObjectExt,
-  Dom,
-  FunctionExt,
-  Point,
-  Rectangle,
-  Cell,
-  View,
+  TransformManager,
+  BackgroundManager,
   Graph,
   GraphView,
   EventArgs,
-  TransformManager,
-  BackgroundManager,
-  Util,
-} from '@antv/x6'
+} from '../../graph'
+import { Platform, NumberExt, ObjectExt, Dom, FunctionExt } from '../../common'
+import { Cell } from '../../model'
+import { View } from '../../view'
+import { Util } from '../../util'
 
 export class ScrollerImpl extends View<ScrollerImpl.EventArgs> {
   private readonly content: HTMLDivElement
